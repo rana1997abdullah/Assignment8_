@@ -7,13 +7,16 @@ public class NewBehaviourScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        var random = new System.Random();
-        for(int i=0;i<20;i++){
-            int num = random.Next(1,21);
-            if(num==15) break;
-            if(num==5) continue;
-            Debug.Log(num);
-        }
+       string [] arr = {"Cat", "Dog", "Car", "Pizza", "Hat", "Fish", "Tree", "Monkey", "Ball", "Bird"};
+       int i = 0;
+       string str = "";
+       while(i<7){
+        int num = Random.Range(0,arr.Length);
+        str+=" "+arr[num];
+        i++;
+       }
+       Debug.Log("My Funny Sentence is "+str);
+        
     }
 
     // Update is called once per frame
